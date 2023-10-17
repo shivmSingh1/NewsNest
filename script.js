@@ -9,7 +9,7 @@ window.addEventListener("load",()=>{
 
 
 async function fetchNews(query){
-    const resp= await fetch(`https://newsapi.org/v2/everything?q=india&from=2023-09-17&sortBy=publishedAt&apiKey=3ffabd93f73f4c35969dc130819016b5`)
+    const resp= await fetch(`https://newsapi.org/v2/everything?q=${query}&from=2023-09-17&sortBy=publishedAt&apiKey=3ffabd93f73f4c35969dc130819016b5`)
 
     const data = await resp.json()
     if (data.articles) {
